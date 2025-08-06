@@ -1,0 +1,44 @@
+ANALYZING A PHISHING EMAIL SAMPLE AND A BRIEF REPORT LISTING PHISHING INDICATORS FOUND 
+
+
+ Step-by-Step Phishing Indicators Analysis
+1. Sender’s Email Address
+   Email Address: amazonsupport@secure-checkout.com
+   Issue: The domain is not from Amazon (@amazon.com). Spoofed domain (secure-checkout.com) is a common phishing tactic.
+ 
+
+2. Email Headers (using header analyzer)
+ Analysis Tool: MXToolbox Email Header Analyzer
+ Findings:
+ Return-Path does not match From.
+ SPF/DKIM/DMARC failures (common with spoofed emails).
+ Phishing Indicator Detected
+
+
+3. Suspicious Links or Attachments
+ Link: http://amazon-checklogin.secure-payment-info.com
+ Issue: Hovering shows a non-Amazon domain that may host malicious content or fake login forms.
+ Phishing Indicator Detected
+
+4. Urgent or Threatening Language
+ Example: “Failure to act within 24 hours will result in permanent account closure.”
+ Used to create panic and prompt users to act without thinking.
+ Phishing Indicator Detected
+
+5. Mismatched URLs
+ Text: “Verify Now” → Looks like Amazon.
+ Actual URL: Fake, unrelated domain.
+ Phishing Indicator Detected
+
+6. Spelling or Grammar Errors
+ Phrase: “clicking the secure link below” (awkward phrasing)
+ Slight awkwardness, but relatively well-written (some phishing is polished).
+ Minor Indicator
+
+Conclusion
+  This email is clearly a phishing attempt. It attempts to steal credentials by redirecting the user to a fake Amazon login page. The use of spoofed email, urgent tone, and misleading links are strong indicators.
+
+Tools Used
+  Online Header Analyzer: MXToolbox
+  Link hover check: Email client preview
+  WHOIS domain checker: https://who.is
